@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu_container {
+    min-height: 100vh;
+    display: flex;
+/*     justify-content: center;
+    align-items: center; */
+}
+
+.menu_icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 20px;
+}
+
+.menu_icon span {
+    display: block;
+    width: 100%;
+    height: .2rem;
+    background: #545454;
+    border-radius: 16px;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: all .25s;
+    transform-origin: left center;
+    will-change: transform, opacity;
+}
+
+.menu_icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu_icon span:nth-child(2) {
+    top: 9px;
+}
+
+.menu_icon span:nth-child(3) {
+    top: 18px;
+}
+
+.menu_link:hover span,
+.menu_link:focus span,
+.menu_link:active span {
+    background: crimson;
+}
+
+.menu_icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 1;
+    left: 2;
+}
+
+.menu_icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu_icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 22;
+    left: 2;
+}
